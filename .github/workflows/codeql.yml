@@ -22,9 +22,6 @@ jobs:
           ls -l
       - name: Add execute permission to init script
         run: chmod +x ./scripts/init.sh
-
-      - name: 测试
-        run: echo ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}
       - name: Check commit messages in PR
         run: |
           FIRST_COMMIT=$(git rev-list --max-parents=0 HEAD)
