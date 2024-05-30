@@ -3,9 +3,7 @@
 your_branch_name="main"  # 替换为你的分支名  
   
 # 获取最早提交  
-first_commit=$(git log --reverse --max-count=1 --pretty=format:"%H" "$your_branch_name")  
-echo "First commit on $your_branch_name: $first_commit"  
+first_commit=$(git rev-list --max-parents=0 HEAD)  
   
 # 获取最新提交  
-last_commit=$(git rev-parse "$your_branch_name")  
-echo "Last commit on $your_branch_name: $last_commit"
+last_commit=$(git rev-parse HEAD)  

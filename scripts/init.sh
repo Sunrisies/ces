@@ -1,8 +1,16 @@
 #!/bin/sh
-
+#!/bin/bash  
+  
+your_branch_name="main"  # 替换为你的分支名  
+  
+# 获取最早提交  
+start_sha=$(git rev-list --max-parents=0 HEAD)  
+  
+# 获取最新提交  
+end_sha=$(git rev-parse HEAD)  
 # 获取两个参数：起始SHA和结束SHA
-start_sha=$1
-end_sha=$2
+# start_sha=$1
+# end_sha=$2
 
 # 设置颜色变量
 RED='\033[0;31m'
