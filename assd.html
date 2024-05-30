@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fetch with Cookies Example</title>
+</head>
+<body>
+  <script>
+    // 注意：这里不需要设置 credentials，因为 fetch 默认就会携带 Cookie
+    fetch('http://localhost:3000/api/test', {
+      method: 'GET',
+      credentials: 'include', // 这一行可以注释掉，因为 fetch 默认会携带 Cookie
+    })
+    .then(response => response.text())
+    .then(data => {
+      console.log(data,'data');
+    })
+    .catch(error => console.error('Error:', error));
+  </script>
+</body>
+</html>

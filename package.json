@@ -1,0 +1,24 @@
+{
+  "name": "temp",
+  "version": "1.0.0",
+  "description": "- cookie的测试数据",
+  "main": "cookie.js",
+  "scripts": {
+    "format:ci": "echo \"Error: no test specified\" && exit 1",
+    "commit": "git-cz"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cz-git": "^1.9.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-git"
+    }
+  },
+  "dependencies": {
+    "@commitlint/config-conventional": "^19.2.2"
+  }
+}
